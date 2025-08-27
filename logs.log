@@ -1,0 +1,928 @@
+2025-08-27 12:33:34,960:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:34,960:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:34,960:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:34,960:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:36,404:INFO:PyCaret ClassificationExperiment
+2025-08-27 12:33:36,404:INFO:Logging name: clf-default-name
+2025-08-27 12:33:36,404:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-08-27 12:33:36,404:INFO:version 3.3.2
+2025-08-27 12:33:36,404:INFO:Initializing setup()
+2025-08-27 12:33:36,404:INFO:self.USI: 9c79
+2025-08-27 12:33:36,404:INFO:self._variable_keys: {'X', 'memory', 'idx', '_ml_usecase', 'fold_shuffle_param', 'y_test', 'fold_groups_param', 'exp_id', 'html_param', 'gpu_n_jobs_param', 'logging_param', 'is_multiclass', 'data', 'gpu_param', 'y_train', 'X_test', 'exp_name_log', 'pipeline', 'log_plots_param', 'USI', 'n_jobs_param', 'target_param', 'fix_imbalance', 'fold_generator', 'X_train', '_available_plots', 'seed', 'y'}
+2025-08-27 12:33:36,404:INFO:Checking environment
+2025-08-27 12:33:36,404:INFO:python_version: 3.11.9
+2025-08-27 12:33:36,404:INFO:python_build: ('main', 'Aug 26 2025 14:30:52')
+2025-08-27 12:33:36,404:INFO:machine: x86_64
+2025-08-27 12:33:36,404:INFO:platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.42
+2025-08-27 12:33:36,404:INFO:Memory: svmem(total=4004274176, available=3160653824, percent=21.1, used=671203328, free=2884321280, active=49352704, inactive=737275904, buffers=22970368, cached=425779200, shared=3231744, slab=103792640)
+2025-08-27 12:33:36,405:INFO:Physical Core: 4
+2025-08-27 12:33:36,405:INFO:Logical Core: 8
+2025-08-27 12:33:36,405:INFO:Checking libraries
+2025-08-27 12:33:36,405:INFO:System:
+2025-08-27 12:33:36,405:INFO:    python: 3.11.9 (main, Aug 26 2025, 14:30:52) [GCC 15.2.1 20250813]
+2025-08-27 12:33:36,405:INFO:executable: /home/jpxx-arts/.programs/ai-benchmarking/.venv/bin/python
+2025-08-27 12:33:36,405:INFO:   machine: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.42
+2025-08-27 12:33:36,405:INFO:PyCaret required dependencies:
+2025-08-27 12:33:36,912:INFO:                 pip: 25.2
+2025-08-27 12:33:36,912:INFO:          setuptools: 80.9.0
+2025-08-27 12:33:36,912:INFO:             pycaret: 3.3.2
+2025-08-27 12:33:36,912:INFO:             IPython: 9.4.0
+2025-08-27 12:33:36,912:INFO:          ipywidgets: 8.1.7
+2025-08-27 12:33:36,912:INFO:                tqdm: 4.67.1
+2025-08-27 12:33:36,912:INFO:               numpy: 1.26.4
+2025-08-27 12:33:36,912:INFO:              pandas: 2.1.4
+2025-08-27 12:33:36,912:INFO:              jinja2: 3.1.6
+2025-08-27 12:33:36,912:INFO:               scipy: 1.11.4
+2025-08-27 12:33:36,912:INFO:              joblib: 1.3.2
+2025-08-27 12:33:36,912:INFO:             sklearn: 1.4.2
+2025-08-27 12:33:36,912:INFO:                pyod: 2.0.5
+2025-08-27 12:33:36,912:INFO:            imblearn: 0.14.0
+2025-08-27 12:33:36,912:INFO:   category_encoders: 2.7.0
+2025-08-27 12:33:36,912:INFO:            lightgbm: 4.6.0
+2025-08-27 12:33:36,912:INFO:               numba: 0.61.0
+2025-08-27 12:33:36,912:INFO:            requests: 2.32.5
+2025-08-27 12:33:36,912:INFO:          matplotlib: 3.7.5
+2025-08-27 12:33:36,912:INFO:          scikitplot: 0.3.7
+2025-08-27 12:33:36,912:INFO:         yellowbrick: 1.5
+2025-08-27 12:33:36,912:INFO:              plotly: 5.24.1
+2025-08-27 12:33:36,912:INFO:    plotly-resampler: Not installed
+2025-08-27 12:33:36,912:INFO:             kaleido: 1.0.0
+2025-08-27 12:33:36,912:INFO:           schemdraw: 0.15
+2025-08-27 12:33:36,912:INFO:         statsmodels: 0.14.5
+2025-08-27 12:33:36,912:INFO:              sktime: 0.26.0
+2025-08-27 12:33:36,912:INFO:               tbats: 1.1.3
+2025-08-27 12:33:36,912:INFO:            pmdarima: 2.0.4
+2025-08-27 12:33:36,912:INFO:              psutil: 7.0.0
+2025-08-27 12:33:36,912:INFO:          markupsafe: 3.0.2
+2025-08-27 12:33:36,912:INFO:             pickle5: Not installed
+2025-08-27 12:33:36,912:INFO:         cloudpickle: 3.1.1
+2025-08-27 12:33:36,912:INFO:         deprecation: 2.1.0
+2025-08-27 12:33:36,912:INFO:              xxhash: 3.5.0
+2025-08-27 12:33:36,912:INFO:           wurlitzer: 3.1.1
+2025-08-27 12:33:36,912:INFO:PyCaret optional dependencies:
+2025-08-27 12:33:39,027:INFO:                shap: 0.44.1
+2025-08-27 12:33:39,027:INFO:           interpret: 0.7.2
+2025-08-27 12:33:39,027:INFO:                umap: 0.5.7
+2025-08-27 12:33:39,027:INFO:     ydata_profiling: 4.16.1
+2025-08-27 12:33:39,027:INFO:  explainerdashboard: 0.5.1
+2025-08-27 12:33:39,027:INFO:             autoviz: Not installed
+2025-08-27 12:33:39,027:INFO:           fairlearn: 0.7.0
+2025-08-27 12:33:39,027:INFO:          deepchecks: Not installed
+2025-08-27 12:33:39,027:INFO:             xgboost: 3.0.4
+2025-08-27 12:33:39,027:INFO:            catboost: 1.2.8
+2025-08-27 12:33:39,027:INFO:              kmodes: 0.12.2
+2025-08-27 12:33:39,027:INFO:             mlxtend: 0.23.4
+2025-08-27 12:33:39,027:INFO:       statsforecast: 1.5.0
+2025-08-27 12:33:39,027:INFO:        tune_sklearn: Not installed
+2025-08-27 12:33:39,027:INFO:                 ray: Not installed
+2025-08-27 12:33:39,027:INFO:            hyperopt: 0.2.7
+2025-08-27 12:33:39,027:INFO:              optuna: 4.5.0
+2025-08-27 12:33:39,027:INFO:               skopt: 0.10.2
+2025-08-27 12:33:39,027:INFO:              mlflow: 3.3.1
+2025-08-27 12:33:39,027:INFO:              gradio: 5.43.1
+2025-08-27 12:33:39,027:INFO:             fastapi: 0.116.1
+2025-08-27 12:33:39,027:INFO:             uvicorn: 0.35.0
+2025-08-27 12:33:39,027:INFO:              m2cgen: 0.10.0
+2025-08-27 12:33:39,027:INFO:           evidently: 0.4.40
+2025-08-27 12:33:39,027:INFO:               fugue: 0.8.7
+2025-08-27 12:33:39,027:INFO:           streamlit: Not installed
+2025-08-27 12:33:39,027:INFO:             prophet: Not installed
+2025-08-27 12:33:39,027:INFO:None
+2025-08-27 12:33:39,027:INFO:Set up GPU usage.
+2025-08-27 12:33:39,027:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,027:WARNING:cuML is outdated or not found. Required version is >=23.08.
+                Please visit https://rapids.ai/install for installation instructions.
+2025-08-27 12:33:39,027:INFO:Set up data.
+2025-08-27 12:33:39,034:INFO:Set up folding strategy.
+2025-08-27 12:33:39,034:INFO:Set up train/test split.
+2025-08-27 12:33:39,037:INFO:Set up index.
+2025-08-27 12:33:39,037:INFO:Assigning column types.
+2025-08-27 12:33:39,039:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-08-27 12:33:39,039:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,061:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-08-27 12:33:39,061:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,063:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,063:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:33:39,063:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,077:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,079:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,081:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,100:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,154:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,177:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-08-27 12:33:39,177:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,177:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,178:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:33:39,178:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,188:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,191:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,191:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,195:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,196:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-08-27 12:33:39,196:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,223:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,223:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,224:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:33:39,224:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,234:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,237:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,237:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,241:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,242:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,269:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,269:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,269:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:33:39,269:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,281:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,283:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,284:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,288:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,289:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-08-27 12:33:39,289:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,317:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,317:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,317:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,328:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,330:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,331:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,335:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,335:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,363:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,363:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,363:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,374:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,376:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,377:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,381:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,383:INFO:Preparing preprocessing pipeline...
+2025-08-27 12:33:39,384:INFO:Set up simple imputation.
+2025-08-27 12:33:39,396:INFO:Finished creating preprocessing pipeline.
+2025-08-27 12:33:39,398:INFO:Pipeline: Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_0', 'feature_1',
+                                             'feature_2', 'feature_3',
+                                             'feature_4', 'feature_5',
+                                             'feature_6', 'feature_7',
+                                             'feature_8', 'feature_9'],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent')))],
+         verbose=False)
+2025-08-27 12:33:39,398:INFO:Creating final display dataframe.
+2025-08-27 12:33:39,432:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target            target
+2                   Target type            Binary
+3           Original data shape         (500, 11)
+4        Transformed data shape         (500, 11)
+5   Transformed train set shape         (350, 11)
+6    Transformed test set shape         (150, 11)
+7              Numeric features                10
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU              True
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              9c79
+2025-08-27 12:33:39,432:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,454:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,454:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,454:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,465:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,467:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,468:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,471:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,472:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,496:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,496:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,496:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,507:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,509:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:33:39,510:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:33:39,514:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:33:39,517:INFO:setup() successfully completed in 3.11s...............
+2025-08-27 12:33:45,461:INFO:Initializing create_model()
+2025-08-27 12:33:45,461:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f6ee8fdcd50>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:33:45,461:INFO:Checking exceptions
+2025-08-27 12:33:45,463:INFO:Importing libraries
+2025-08-27 12:33:45,463:INFO:Copying training dataset
+2025-08-27 12:33:45,466:INFO:Defining folds
+2025-08-27 12:33:45,466:INFO:Declaring metric variables
+2025-08-27 12:33:45,467:INFO:Importing untrained model
+2025-08-27 12:33:45,467:INFO:Logistic Regression Imported successfully
+2025-08-27 12:33:45,467:INFO:Starting cross validation
+2025-08-27 12:33:45,467:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:33:45,603:INFO:Calculating mean and std
+2025-08-27 12:33:45,603:INFO:Creating metrics dataframe
+2025-08-27 12:33:45,604:INFO:Finalizing model
+2025-08-27 12:33:45,609:INFO:Uploading results into container
+2025-08-27 12:33:45,609:INFO:Uploading model into container now
+2025-08-27 12:33:45,610:INFO:_master_model_container: 1
+2025-08-27 12:33:45,610:INFO:_display_container: 2
+2025-08-27 12:33:45,610:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-08-27 12:33:45,610:INFO:create_model() successfully completed......................................
+2025-08-27 12:38:22,020:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:22,020:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:22,020:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:22,020:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:23,904:INFO:PyCaret ClassificationExperiment
+2025-08-27 12:38:23,904:INFO:Logging name: clf-default-name
+2025-08-27 12:38:23,904:INFO:ML Usecase: MLUsecase.CLASSIFICATION
+2025-08-27 12:38:23,904:INFO:version 3.3.2
+2025-08-27 12:38:23,904:INFO:Initializing setup()
+2025-08-27 12:38:23,904:INFO:self.USI: 6c63
+2025-08-27 12:38:23,904:INFO:self._variable_keys: {'idx', 'X', '_ml_usecase', 'fold_groups_param', 'y_train', 'log_plots_param', 'pipeline', 'X_test', 'y', 'is_multiclass', 'fold_shuffle_param', 'memory', '_available_plots', 'USI', 'exp_name_log', 'logging_param', 'seed', 'fold_generator', 'exp_id', 'y_test', 'html_param', 'data', 'gpu_param', 'gpu_n_jobs_param', 'n_jobs_param', 'target_param', 'fix_imbalance', 'X_train'}
+2025-08-27 12:38:23,904:INFO:Checking environment
+2025-08-27 12:38:23,905:INFO:python_version: 3.11.9
+2025-08-27 12:38:23,905:INFO:python_build: ('main', 'Aug 26 2025 14:30:52')
+2025-08-27 12:38:23,905:INFO:machine: x86_64
+2025-08-27 12:38:23,905:INFO:platform: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.42
+2025-08-27 12:38:23,905:INFO:Memory: svmem(total=4004274176, available=2912276480, percent=27.3, used=916578304, free=2634907648, active=43077632, inactive=986435584, buffers=3481600, cached=449306624, shared=3244032, slab=110407680)
+2025-08-27 12:38:23,905:INFO:Physical Core: 4
+2025-08-27 12:38:23,905:INFO:Logical Core: 8
+2025-08-27 12:38:23,905:INFO:Checking libraries
+2025-08-27 12:38:23,905:INFO:System:
+2025-08-27 12:38:23,905:INFO:    python: 3.11.9 (main, Aug 26 2025, 14:30:52) [GCC 15.2.1 20250813]
+2025-08-27 12:38:23,905:INFO:executable: /home/jpxx-arts/.programs/ai-benchmarking/.venv/bin/python
+2025-08-27 12:38:23,905:INFO:   machine: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.42
+2025-08-27 12:38:23,905:INFO:PyCaret required dependencies:
+2025-08-27 12:38:24,434:INFO:                 pip: 25.2
+2025-08-27 12:38:24,434:INFO:          setuptools: 80.9.0
+2025-08-27 12:38:24,434:INFO:             pycaret: 3.3.2
+2025-08-27 12:38:24,434:INFO:             IPython: 9.4.0
+2025-08-27 12:38:24,434:INFO:          ipywidgets: 8.1.7
+2025-08-27 12:38:24,434:INFO:                tqdm: 4.67.1
+2025-08-27 12:38:24,434:INFO:               numpy: 1.26.4
+2025-08-27 12:38:24,434:INFO:              pandas: 2.1.4
+2025-08-27 12:38:24,434:INFO:              jinja2: 3.1.6
+2025-08-27 12:38:24,434:INFO:               scipy: 1.11.4
+2025-08-27 12:38:24,434:INFO:              joblib: 1.3.2
+2025-08-27 12:38:24,434:INFO:             sklearn: 1.4.2
+2025-08-27 12:38:24,434:INFO:                pyod: 2.0.5
+2025-08-27 12:38:24,434:INFO:            imblearn: 0.14.0
+2025-08-27 12:38:24,434:INFO:   category_encoders: 2.7.0
+2025-08-27 12:38:24,434:INFO:            lightgbm: 4.6.0
+2025-08-27 12:38:24,434:INFO:               numba: 0.61.0
+2025-08-27 12:38:24,434:INFO:            requests: 2.32.5
+2025-08-27 12:38:24,434:INFO:          matplotlib: 3.7.5
+2025-08-27 12:38:24,434:INFO:          scikitplot: 0.3.7
+2025-08-27 12:38:24,434:INFO:         yellowbrick: 1.5
+2025-08-27 12:38:24,434:INFO:              plotly: 5.24.1
+2025-08-27 12:38:24,435:INFO:    plotly-resampler: Not installed
+2025-08-27 12:38:24,435:INFO:             kaleido: 1.0.0
+2025-08-27 12:38:24,435:INFO:           schemdraw: 0.15
+2025-08-27 12:38:24,435:INFO:         statsmodels: 0.14.5
+2025-08-27 12:38:24,435:INFO:              sktime: 0.26.0
+2025-08-27 12:38:24,435:INFO:               tbats: 1.1.3
+2025-08-27 12:38:24,435:INFO:            pmdarima: 2.0.4
+2025-08-27 12:38:24,435:INFO:              psutil: 7.0.0
+2025-08-27 12:38:24,435:INFO:          markupsafe: 3.0.2
+2025-08-27 12:38:24,435:INFO:             pickle5: Not installed
+2025-08-27 12:38:24,435:INFO:         cloudpickle: 3.1.1
+2025-08-27 12:38:24,435:INFO:         deprecation: 2.1.0
+2025-08-27 12:38:24,435:INFO:              xxhash: 3.5.0
+2025-08-27 12:38:24,435:INFO:           wurlitzer: 3.1.1
+2025-08-27 12:38:24,435:INFO:PyCaret optional dependencies:
+2025-08-27 12:38:26,511:INFO:                shap: 0.44.1
+2025-08-27 12:38:26,511:INFO:           interpret: 0.7.2
+2025-08-27 12:38:26,511:INFO:                umap: 0.5.7
+2025-08-27 12:38:26,511:INFO:     ydata_profiling: 4.16.1
+2025-08-27 12:38:26,511:INFO:  explainerdashboard: 0.5.1
+2025-08-27 12:38:26,511:INFO:             autoviz: Not installed
+2025-08-27 12:38:26,511:INFO:           fairlearn: 0.7.0
+2025-08-27 12:38:26,511:INFO:          deepchecks: Not installed
+2025-08-27 12:38:26,511:INFO:             xgboost: 3.0.4
+2025-08-27 12:38:26,511:INFO:            catboost: 1.2.8
+2025-08-27 12:38:26,511:INFO:              kmodes: 0.12.2
+2025-08-27 12:38:26,511:INFO:             mlxtend: 0.23.4
+2025-08-27 12:38:26,511:INFO:       statsforecast: 1.5.0
+2025-08-27 12:38:26,511:INFO:        tune_sklearn: Not installed
+2025-08-27 12:38:26,511:INFO:                 ray: Not installed
+2025-08-27 12:38:26,511:INFO:            hyperopt: 0.2.7
+2025-08-27 12:38:26,511:INFO:              optuna: 4.5.0
+2025-08-27 12:38:26,511:INFO:               skopt: 0.10.2
+2025-08-27 12:38:26,511:INFO:              mlflow: 3.3.1
+2025-08-27 12:38:26,511:INFO:              gradio: 5.43.1
+2025-08-27 12:38:26,511:INFO:             fastapi: 0.116.1
+2025-08-27 12:38:26,511:INFO:             uvicorn: 0.35.0
+2025-08-27 12:38:26,511:INFO:              m2cgen: 0.10.0
+2025-08-27 12:38:26,511:INFO:           evidently: 0.4.40
+2025-08-27 12:38:26,511:INFO:               fugue: 0.8.7
+2025-08-27 12:38:26,511:INFO:           streamlit: Not installed
+2025-08-27 12:38:26,511:INFO:             prophet: Not installed
+2025-08-27 12:38:26,511:INFO:None
+2025-08-27 12:38:26,511:INFO:Set up GPU usage.
+2025-08-27 12:38:26,511:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:26,511:WARNING:cuML is outdated or not found. Required version is >=23.08.
+                Please visit https://rapids.ai/install for installation instructions.
+2025-08-27 12:38:26,511:INFO:Set up data.
+2025-08-27 12:38:26,682:INFO:Set up folding strategy.
+2025-08-27 12:38:26,682:INFO:Set up train/test split.
+2025-08-27 12:38:26,811:INFO:Set up index.
+2025-08-27 12:38:26,814:INFO:Assigning column types.
+2025-08-27 12:38:26,895:INFO:Engine successfully changes for model 'lr' to 'sklearn'.
+2025-08-27 12:38:26,895:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:26,918:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-08-27 12:38:26,918:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:26,920:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:26,921:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:38:26,921:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:26,936:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:26,938:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:26,940:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:26,956:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:27,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,021:INFO:Engine for model 'knn' has not been set explicitly, hence returning None.
+2025-08-27 12:38:27,021:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,021:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,021:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:38:27,021:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,032:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,034:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,034:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:27,039:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:27,039:INFO:Engine successfully changes for model 'knn' to 'sklearn'.
+2025-08-27 12:38:27,039:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,067:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,067:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,067:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:38:27,067:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,078:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,080:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,081:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:27,086:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:27,086:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,109:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,109:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,109:INFO:Engine for model 'rbfsvm' has not been set explicitly, hence returning None.
+2025-08-27 12:38:27,109:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,120:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,122:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,123:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:27,127:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:27,127:INFO:Engine successfully changes for model 'rbfsvm' to 'sklearn'.
+2025-08-27 12:38:27,127:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,149:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,149:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,149:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,160:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,162:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,162:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:27,167:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:27,168:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,195:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,195:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,195:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,206:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,208:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,208:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:27,212:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:27,215:INFO:Preparing preprocessing pipeline...
+2025-08-27 12:38:27,231:INFO:Set up simple imputation.
+2025-08-27 12:38:27,465:INFO:Finished creating preprocessing pipeline.
+2025-08-27 12:38:27,483:INFO:Pipeline: Pipeline(memory=FastMemory(location=/tmp/joblib),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['feature_0', 'feature_1',
+                                             'feature_2', 'feature_3',
+                                             'feature_4', 'feature_5',
+                                             'feature_6', 'feature_7',
+                                             'feature_8', 'feature_9',
+                                             'feature_10', 'feature_11',
+                                             'feature_12', 'feature_13',
+                                             'feature_14', 'feature_15',
+                                             'feature_16', 'feature_17',
+                                             'feature...
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='mean'))),
+                ('categorical_imputer',
+                 TransformerWrapper(exclude=None, include=[],
+                                    transformer=SimpleImputer(add_indicator=False,
+                                                              copy=True,
+                                                              fill_value=None,
+                                                              keep_empty_features=False,
+                                                              missing_values=nan,
+                                                              strategy='most_frequent')))],
+         verbose=False)
+2025-08-27 12:38:27,483:INFO:Creating final display dataframe.
+2025-08-27 12:38:27,920:INFO:Setup _display_container:                     Description             Value
+0                    Session id               123
+1                        Target            target
+2                   Target type            Binary
+3           Original data shape      (200000, 51)
+4        Transformed data shape      (200000, 51)
+5   Transformed train set shape      (140000, 51)
+6    Transformed test set shape       (60000, 51)
+7              Numeric features                50
+8                    Preprocess              True
+9               Imputation type            simple
+10           Numeric imputation              mean
+11       Categorical imputation              mode
+12               Fold Generator   StratifiedKFold
+13                  Fold Number                10
+14                     CPU Jobs                -1
+15                      Use GPU              True
+16               Log Experiment             False
+17              Experiment Name  clf-default-name
+18                          USI              6c63
+2025-08-27 12:38:27,920:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,942:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,942:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,943:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,953:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,956:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,956:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:27,960:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:27,961:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,986:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,986:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,986:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:27,998:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:28,000:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2025-08-27 12:38:28,000:INFO:Soft dependency imported: xgboost: 3.0.4
+2025-08-27 12:38:28,005:INFO:Soft dependency imported: catboost: 1.2.8
+2025-08-27 12:38:28,006:INFO:setup() successfully completed in 4.1s...............
+2025-08-27 12:38:33,375:INFO:Initializing create_model()
+2025-08-27 12:38:33,375:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f1344f52310>, estimator=lr, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:38:33,375:INFO:Checking exceptions
+2025-08-27 12:38:33,377:INFO:Importing libraries
+2025-08-27 12:38:33,378:INFO:Copying training dataset
+2025-08-27 12:38:33,479:INFO:Defining folds
+2025-08-27 12:38:33,479:INFO:Declaring metric variables
+2025-08-27 12:38:33,480:INFO:Importing untrained model
+2025-08-27 12:38:33,480:INFO:Logistic Regression Imported successfully
+2025-08-27 12:38:33,480:INFO:Starting cross validation
+2025-08-27 12:38:33,481:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:38:45,991:INFO:Calculating mean and std
+2025-08-27 12:38:45,992:INFO:Creating metrics dataframe
+2025-08-27 12:38:45,993:INFO:Finalizing model
+2025-08-27 12:38:46,951:INFO:Uploading results into container
+2025-08-27 12:38:46,951:INFO:Uploading model into container now
+2025-08-27 12:38:46,952:INFO:_master_model_container: 1
+2025-08-27 12:38:46,952:INFO:_display_container: 2
+2025-08-27 12:38:46,952:INFO:LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+                   intercept_scaling=1, l1_ratio=None, max_iter=1000,
+                   multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False)
+2025-08-27 12:38:46,952:INFO:create_model() successfully completed......................................
+2025-08-27 12:38:53,731:INFO:Initializing create_model()
+2025-08-27 12:38:53,731:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f1344f52310>, estimator=knn, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:38:53,735:INFO:Checking exceptions
+2025-08-27 12:38:53,737:INFO:Importing libraries
+2025-08-27 12:38:53,737:INFO:Copying training dataset
+2025-08-27 12:38:53,831:INFO:Defining folds
+2025-08-27 12:38:53,831:INFO:Declaring metric variables
+2025-08-27 12:38:53,831:INFO:Importing untrained model
+2025-08-27 12:38:53,831:INFO:K Neighbors Classifier Imported successfully
+2025-08-27 12:38:53,831:INFO:Starting cross validation
+2025-08-27 12:38:53,832:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:39:08,732:WARNING:[codecarbon INFO @ 12:39:08] Energy consumed for RAM : 0.000043 kWh. RAM Power : 10.0 W
+2025-08-27 12:39:09,233:WARNING:[codecarbon INFO @ 12:39:09] Delta energy consumed for CPU with cpu_load : 0.000027 kWh, power : 6.3496853408 W
+2025-08-27 12:39:09,233:WARNING:[codecarbon INFO @ 12:39:09] Energy consumed for All CPU : 0.000027 kWh
+2025-08-27 12:39:09,233:WARNING:[codecarbon INFO @ 12:39:09] 0.000070 kWh of electricity used since the beginning.
+2025-08-27 12:39:23,732:WARNING:[codecarbon INFO @ 12:39:23] Energy consumed for RAM : 0.000083 kWh. RAM Power : 10.0 W
+2025-08-27 12:39:24,233:WARNING:[codecarbon INFO @ 12:39:24] Delta energy consumed for CPU with cpu_load : 0.000025 kWh, power : 6.18818189 W
+2025-08-27 12:39:24,233:WARNING:[codecarbon INFO @ 12:39:24] Energy consumed for All CPU : 0.000052 kWh
+2025-08-27 12:39:24,233:WARNING:[codecarbon INFO @ 12:39:24] 0.000136 kWh of electricity used since the beginning.
+2025-08-27 12:39:38,733:WARNING:[codecarbon INFO @ 12:39:38] Energy consumed for RAM : 0.000124 kWh. RAM Power : 10.0 W
+2025-08-27 12:39:39,233:WARNING:[codecarbon INFO @ 12:39:39] Delta energy consumed for CPU with cpu_load : 0.000026 kWh, power : 6.521395870400001 W
+2025-08-27 12:39:39,234:WARNING:[codecarbon INFO @ 12:39:39] Energy consumed for All CPU : 0.000079 kWh
+2025-08-27 12:39:39,234:WARNING:[codecarbon INFO @ 12:39:39] 0.000202 kWh of electricity used since the beginning.
+2025-08-27 12:39:53,733:WARNING:[codecarbon INFO @ 12:39:53] Energy consumed for RAM : 0.000164 kWh. RAM Power : 10.0 W
+2025-08-27 12:39:54,233:WARNING:[codecarbon INFO @ 12:39:54] Delta energy consumed for CPU with cpu_load : 0.000026 kWh, power : 6.4118545538000005 W
+2025-08-27 12:39:54,234:WARNING:[codecarbon INFO @ 12:39:54] Energy consumed for All CPU : 0.000104 kWh
+2025-08-27 12:39:54,234:WARNING:[codecarbon INFO @ 12:39:54] 0.000268 kWh of electricity used since the beginning.
+2025-08-27 12:40:08,733:WARNING:[codecarbon INFO @ 12:40:08] Energy consumed for RAM : 0.000204 kWh. RAM Power : 10.0 W
+2025-08-27 12:40:08,960:INFO:Calculating mean and std
+2025-08-27 12:40:08,960:INFO:Creating metrics dataframe
+2025-08-27 12:40:08,961:INFO:Finalizing model
+2025-08-27 12:40:09,072:INFO:Uploading results into container
+2025-08-27 12:40:09,072:INFO:Uploading model into container now
+2025-08-27 12:40:09,073:INFO:_master_model_container: 2
+2025-08-27 12:40:09,073:INFO:_display_container: 3
+2025-08-27 12:40:09,073:INFO:KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+                     metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+                     weights='uniform')
+2025-08-27 12:40:09,073:INFO:create_model() successfully completed......................................
+2025-08-27 12:40:15,828:INFO:Initializing create_model()
+2025-08-27 12:40:15,828:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f1344f52310>, estimator=nb, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:40:15,828:INFO:Checking exceptions
+2025-08-27 12:40:15,830:INFO:Importing libraries
+2025-08-27 12:40:15,830:INFO:Copying training dataset
+2025-08-27 12:40:15,921:INFO:Defining folds
+2025-08-27 12:40:15,921:INFO:Declaring metric variables
+2025-08-27 12:40:15,921:INFO:Importing untrained model
+2025-08-27 12:40:15,921:INFO:Naive Bayes Imported successfully
+2025-08-27 12:40:15,921:INFO:Starting cross validation
+2025-08-27 12:40:15,922:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:40:17,714:INFO:Calculating mean and std
+2025-08-27 12:40:17,714:INFO:Creating metrics dataframe
+2025-08-27 12:40:17,715:INFO:Finalizing model
+2025-08-27 12:40:17,846:INFO:Uploading results into container
+2025-08-27 12:40:17,846:INFO:Uploading model into container now
+2025-08-27 12:40:17,846:INFO:_master_model_container: 3
+2025-08-27 12:40:17,846:INFO:_display_container: 4
+2025-08-27 12:40:17,846:INFO:GaussianNB(priors=None, var_smoothing=1e-09)
+2025-08-27 12:40:17,846:INFO:create_model() successfully completed......................................
+2025-08-27 12:40:24,775:INFO:Initializing create_model()
+2025-08-27 12:40:24,775:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f1344f52310>, estimator=dt, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:40:24,775:INFO:Checking exceptions
+2025-08-27 12:40:24,776:INFO:Importing libraries
+2025-08-27 12:40:24,776:INFO:Copying training dataset
+2025-08-27 12:40:24,856:INFO:Defining folds
+2025-08-27 12:40:24,857:INFO:Declaring metric variables
+2025-08-27 12:40:24,857:INFO:Importing untrained model
+2025-08-27 12:40:24,857:INFO:Decision Tree Classifier Imported successfully
+2025-08-27 12:40:24,857:INFO:Starting cross validation
+2025-08-27 12:40:24,857:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:40:39,776:WARNING:[codecarbon INFO @ 12:40:39] Energy consumed for RAM : 0.000043 kWh. RAM Power : 10.0 W
+2025-08-27 12:40:40,276:WARNING:[codecarbon INFO @ 12:40:40] Delta energy consumed for CPU with cpu_load : 0.000014 kWh, power : 3.2570868300800004 W
+2025-08-27 12:40:40,276:WARNING:[codecarbon INFO @ 12:40:40] Energy consumed for All CPU : 0.000014 kWh
+2025-08-27 12:40:40,277:WARNING:[codecarbon INFO @ 12:40:40] 0.000057 kWh of electricity used since the beginning.
+2025-08-27 12:40:54,776:WARNING:[codecarbon INFO @ 12:40:54] Energy consumed for RAM : 0.000083 kWh. RAM Power : 10.0 W
+2025-08-27 12:40:55,277:WARNING:[codecarbon INFO @ 12:40:55] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 3.257388710600001 W
+2025-08-27 12:40:55,277:WARNING:[codecarbon INFO @ 12:40:55] Energy consumed for All CPU : 0.000027 kWh
+2025-08-27 12:40:55,277:WARNING:[codecarbon INFO @ 12:40:55] 0.000110 kWh of electricity used since the beginning.
+2025-08-27 12:41:09,777:WARNING:[codecarbon INFO @ 12:41:09] Energy consumed for RAM : 0.000124 kWh. RAM Power : 10.0 W
+2025-08-27 12:41:10,277:WARNING:[codecarbon INFO @ 12:41:10] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 3.257454354800001 W
+2025-08-27 12:41:10,277:WARNING:[codecarbon INFO @ 12:41:10] Energy consumed for All CPU : 0.000040 kWh
+2025-08-27 12:41:10,277:WARNING:[codecarbon INFO @ 12:41:10] 0.000164 kWh of electricity used since the beginning.
+2025-08-27 12:41:24,777:WARNING:[codecarbon INFO @ 12:41:24] Energy consumed for RAM : 0.000164 kWh. RAM Power : 10.0 W
+2025-08-27 12:41:25,278:WARNING:[codecarbon INFO @ 12:41:25] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 3.259229738 W
+2025-08-27 12:41:25,278:WARNING:[codecarbon INFO @ 12:41:25] Energy consumed for All CPU : 0.000053 kWh
+2025-08-27 12:41:25,278:WARNING:[codecarbon INFO @ 12:41:25] 0.000217 kWh of electricity used since the beginning.
+2025-08-27 12:41:39,777:WARNING:[codecarbon INFO @ 12:41:39] Energy consumed for RAM : 0.000204 kWh. RAM Power : 10.0 W
+2025-08-27 12:41:40,278:WARNING:[codecarbon INFO @ 12:41:40] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 3.2598415706 W
+2025-08-27 12:41:40,278:WARNING:[codecarbon INFO @ 12:41:40] Energy consumed for All CPU : 0.000067 kWh
+2025-08-27 12:41:40,278:WARNING:[codecarbon INFO @ 12:41:40] 0.000271 kWh of electricity used since the beginning.
+2025-08-27 12:41:54,778:WARNING:[codecarbon INFO @ 12:41:54] Energy consumed for RAM : 0.000244 kWh. RAM Power : 10.0 W
+2025-08-27 12:41:55,279:WARNING:[codecarbon INFO @ 12:41:55] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 3.2588940344000012 W
+2025-08-27 12:41:55,279:WARNING:[codecarbon INFO @ 12:41:55] Energy consumed for All CPU : 0.000080 kWh
+2025-08-27 12:41:55,279:WARNING:[codecarbon INFO @ 12:41:55] 0.000324 kWh of electricity used since the beginning.
+2025-08-27 12:42:09,778:WARNING:[codecarbon INFO @ 12:42:09] Energy consumed for RAM : 0.000285 kWh. RAM Power : 10.0 W
+2025-08-27 12:42:10,279:WARNING:[codecarbon INFO @ 12:42:10] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 3.2567697932000006 W
+2025-08-27 12:42:10,279:WARNING:[codecarbon INFO @ 12:42:10] Energy consumed for All CPU : 0.000093 kWh
+2025-08-27 12:42:10,279:WARNING:[codecarbon INFO @ 12:42:10] 0.000377 kWh of electricity used since the beginning.
+2025-08-27 12:42:21,002:INFO:Calculating mean and std
+2025-08-27 12:42:21,002:INFO:Creating metrics dataframe
+2025-08-27 12:42:21,003:INFO:Finalizing model
+2025-08-27 12:42:24,794:WARNING:[codecarbon INFO @ 12:42:24] Energy consumed for RAM : 0.000325 kWh. RAM Power : 10.0 W
+2025-08-27 12:42:25,295:WARNING:[codecarbon INFO @ 12:42:25] Delta energy consumed for CPU with cpu_load : 0.000013 kWh, power : 3.2566807130000006 W
+2025-08-27 12:42:25,295:WARNING:[codecarbon INFO @ 12:42:25] Energy consumed for All CPU : 0.000106 kWh
+2025-08-27 12:42:25,295:WARNING:[codecarbon INFO @ 12:42:25] 0.000431 kWh of electricity used since the beginning.
+2025-08-27 12:42:25,297:WARNING:[codecarbon INFO @ 12:42:25] 0.000350 g.CO2eq/s mean an estimation of 11.042750197749973 kg.CO2eq/year
+2025-08-27 12:42:33,750:INFO:Uploading results into container
+2025-08-27 12:42:33,750:INFO:Uploading model into container now
+2025-08-27 12:42:33,751:INFO:_master_model_container: 4
+2025-08-27 12:42:33,751:INFO:_display_container: 5
+2025-08-27 12:42:33,751:INFO:DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=None, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, random_state=123, splitter='best')
+2025-08-27 12:42:33,751:INFO:create_model() successfully completed......................................
+2025-08-27 12:42:40,712:INFO:Initializing create_model()
+2025-08-27 12:42:40,712:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f1344f52310>, estimator=rf, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:42:40,712:INFO:Checking exceptions
+2025-08-27 12:42:40,713:INFO:Importing libraries
+2025-08-27 12:42:40,713:INFO:Copying training dataset
+2025-08-27 12:42:40,798:INFO:Defining folds
+2025-08-27 12:42:40,798:INFO:Declaring metric variables
+2025-08-27 12:42:40,798:INFO:Importing untrained model
+2025-08-27 12:42:40,798:INFO:Random Forest Classifier Imported successfully
+2025-08-27 12:42:40,798:INFO:Starting cross validation
+2025-08-27 12:42:40,799:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:42:55,724:WARNING:[codecarbon INFO @ 12:42:55] Energy consumed for RAM : 0.000043 kWh. RAM Power : 10.0 W
+2025-08-27 12:42:56,225:WARNING:[codecarbon INFO @ 12:42:56] Delta energy consumed for CPU with cpu_load : 0.000138 kWh, power : 31.98850302464 W
+2025-08-27 12:42:56,225:WARNING:[codecarbon INFO @ 12:42:56] Energy consumed for All CPU : 0.000138 kWh
+2025-08-27 12:42:56,225:WARNING:[codecarbon INFO @ 12:42:56] 0.000181 kWh of electricity used since the beginning.
+2025-08-27 12:43:10,736:WARNING:[codecarbon INFO @ 12:43:10] Energy consumed for RAM : 0.000083 kWh. RAM Power : 10.0 W
+2025-08-27 12:43:11,236:WARNING:[codecarbon INFO @ 12:43:11] Delta energy consumed for CPU with cpu_load : 0.000120 kWh, power : 29.7179805506 W
+2025-08-27 12:43:11,236:WARNING:[codecarbon INFO @ 12:43:11] Energy consumed for All CPU : 0.000258 kWh
+2025-08-27 12:43:11,236:WARNING:[codecarbon INFO @ 12:43:11] 0.000341 kWh of electricity used since the beginning.
+2025-08-27 12:43:25,745:WARNING:[codecarbon INFO @ 12:43:25] Energy consumed for RAM : 0.000124 kWh. RAM Power : 10.0 W
+2025-08-27 12:43:26,245:WARNING:[codecarbon INFO @ 12:43:26] Delta energy consumed for CPU with cpu_load : 0.000121 kWh, power : 30.0173720648 W
+2025-08-27 12:43:26,245:WARNING:[codecarbon INFO @ 12:43:26] Energy consumed for All CPU : 0.000379 kWh
+2025-08-27 12:43:26,245:WARNING:[codecarbon INFO @ 12:43:26] 0.000502 kWh of electricity used since the beginning.
+2025-08-27 12:43:40,755:WARNING:[codecarbon INFO @ 12:43:40] Energy consumed for RAM : 0.000164 kWh. RAM Power : 10.0 W
+2025-08-27 12:43:41,255:WARNING:[codecarbon INFO @ 12:43:41] Delta energy consumed for CPU with cpu_load : 0.000118 kWh, power : 29.305299659 W
+2025-08-27 12:43:41,255:WARNING:[codecarbon INFO @ 12:43:41] Energy consumed for All CPU : 0.000497 kWh
+2025-08-27 12:43:41,255:WARNING:[codecarbon INFO @ 12:43:41] 0.000661 kWh of electricity used since the beginning.
+2025-08-27 12:43:55,764:WARNING:[codecarbon INFO @ 12:43:55] Energy consumed for RAM : 0.000204 kWh. RAM Power : 10.0 W
+2025-08-27 12:43:56,265:WARNING:[codecarbon INFO @ 12:43:56] Delta energy consumed for CPU with cpu_load : 0.000122 kWh, power : 30.148198230200002 W
+2025-08-27 12:43:56,265:WARNING:[codecarbon INFO @ 12:43:56] Energy consumed for All CPU : 0.000618 kWh
+2025-08-27 12:43:56,265:WARNING:[codecarbon INFO @ 12:43:56] 0.000823 kWh of electricity used since the beginning.
+2025-08-27 12:44:10,774:WARNING:[codecarbon INFO @ 12:44:10] Energy consumed for RAM : 0.000245 kWh. RAM Power : 10.0 W
+2025-08-27 12:44:11,275:WARNING:[codecarbon INFO @ 12:44:11] Delta energy consumed for CPU with cpu_load : 0.000129 kWh, power : 31.989221585599996 W
+2025-08-27 12:44:11,275:WARNING:[codecarbon INFO @ 12:44:11] Energy consumed for All CPU : 0.000747 kWh
+2025-08-27 12:44:11,275:WARNING:[codecarbon INFO @ 12:44:11] 0.000992 kWh of electricity used since the beginning.
+2025-08-27 12:44:25,784:WARNING:[codecarbon INFO @ 12:44:25] Energy consumed for RAM : 0.000285 kWh. RAM Power : 10.0 W
+2025-08-27 12:44:26,285:WARNING:[codecarbon INFO @ 12:44:26] Delta energy consumed for CPU with cpu_load : 0.000122 kWh, power : 30.308503024640004 W
+2025-08-27 12:44:26,285:WARNING:[codecarbon INFO @ 12:44:26] Energy consumed for All CPU : 0.000869 kWh
+2025-08-27 12:44:26,285:WARNING:[codecarbon INFO @ 12:44:26] 0.001154 kWh of electricity used since the beginning.
+2025-08-27 12:44:40,794:WARNING:[codecarbon INFO @ 12:44:40] Energy consumed for RAM : 0.000325 kWh. RAM Power : 10.0 W
+2025-08-27 12:44:41,297:WARNING:[codecarbon INFO @ 12:44:41] Delta energy consumed for CPU with cpu_load : 0.000118 kWh, power : 29.396943199400003 W
+2025-08-27 12:44:41,297:WARNING:[codecarbon INFO @ 12:44:41] Energy consumed for All CPU : 0.000988 kWh
+2025-08-27 12:44:41,297:WARNING:[codecarbon INFO @ 12:44:41] 0.001313 kWh of electricity used since the beginning.
+2025-08-27 12:44:41,297:WARNING:[codecarbon INFO @ 12:44:41] 0.001066 g.CO2eq/s mean an estimation of 33.631854543089524 kg.CO2eq/year
+2025-08-27 12:44:55,804:WARNING:[codecarbon INFO @ 12:44:55] Energy consumed for RAM : 0.000366 kWh. RAM Power : 10.0 W
+2025-08-27 12:44:56,305:WARNING:[codecarbon INFO @ 12:44:56] Delta energy consumed for CPU with cpu_load : 0.000122 kWh, power : 30.3178736606 W
+2025-08-27 12:44:56,305:WARNING:[codecarbon INFO @ 12:44:56] Energy consumed for All CPU : 0.001110 kWh
+2025-08-27 12:44:56,305:WARNING:[codecarbon INFO @ 12:44:56] 0.001476 kWh of electricity used since the beginning.
+2025-08-27 12:45:10,814:WARNING:[codecarbon INFO @ 12:45:10] Energy consumed for RAM : 0.000406 kWh. RAM Power : 10.0 W
+2025-08-27 12:45:11,315:WARNING:[codecarbon INFO @ 12:45:11] Delta energy consumed for CPU with cpu_load : 0.000122 kWh, power : 30.3522881342 W
+2025-08-27 12:45:11,315:WARNING:[codecarbon INFO @ 12:45:11] Energy consumed for All CPU : 0.001232 kWh
+2025-08-27 12:45:11,315:WARNING:[codecarbon INFO @ 12:45:11] 0.001638 kWh of electricity used since the beginning.
+2025-08-27 12:45:25,824:WARNING:[codecarbon INFO @ 12:45:25] Energy consumed for RAM : 0.000446 kWh. RAM Power : 10.0 W
+2025-08-27 12:45:26,325:WARNING:[codecarbon INFO @ 12:45:26] Delta energy consumed for CPU with cpu_load : 0.000126 kWh, power : 31.183212862399998 W
+2025-08-27 12:45:26,325:WARNING:[codecarbon INFO @ 12:45:26] Energy consumed for All CPU : 0.001358 kWh
+2025-08-27 12:45:26,325:WARNING:[codecarbon INFO @ 12:45:26] 0.001804 kWh of electricity used since the beginning.
+2025-08-27 12:45:40,835:WARNING:[codecarbon INFO @ 12:45:40] Energy consumed for RAM : 0.000486 kWh. RAM Power : 10.0 W
+2025-08-27 12:45:41,336:WARNING:[codecarbon INFO @ 12:45:41] Delta energy consumed for CPU with cpu_load : 0.000123 kWh, power : 30.612014789 W
+2025-08-27 12:45:41,336:WARNING:[codecarbon INFO @ 12:45:41] Energy consumed for All CPU : 0.001481 kWh
+2025-08-27 12:45:41,336:WARNING:[codecarbon INFO @ 12:45:41] 0.001968 kWh of electricity used since the beginning.
+2025-08-27 12:45:44,397:INFO:Calculating mean and std
+2025-08-27 12:45:44,397:INFO:Creating metrics dataframe
+2025-08-27 12:45:44,399:INFO:Finalizing model
+2025-08-27 12:45:55,844:WARNING:[codecarbon INFO @ 12:45:55] Energy consumed for RAM : 0.000527 kWh. RAM Power : 10.0 W
+2025-08-27 12:45:56,345:WARNING:[codecarbon INFO @ 12:45:56] Delta energy consumed for CPU with cpu_load : 0.000122 kWh, power : 30.3891999764 W
+2025-08-27 12:45:56,345:WARNING:[codecarbon INFO @ 12:45:56] Energy consumed for All CPU : 0.001604 kWh
+2025-08-27 12:45:56,345:WARNING:[codecarbon INFO @ 12:45:56] 0.002131 kWh of electricity used since the beginning.
+2025-08-27 12:46:04,114:INFO:Uploading results into container
+2025-08-27 12:46:04,115:INFO:Uploading model into container now
+2025-08-27 12:46:04,116:INFO:_master_model_container: 5
+2025-08-27 12:46:04,116:INFO:_display_container: 6
+2025-08-27 12:46:04,116:INFO:RandomForestClassifier(bootstrap=True, ccp_alpha=0.0, class_weight=None,
+                       criterion='gini', max_depth=None, max_features='sqrt',
+                       max_leaf_nodes=None, max_samples=None,
+                       min_impurity_decrease=0.0, min_samples_leaf=1,
+                       min_samples_split=2, min_weight_fraction_leaf=0.0,
+                       monotonic_cst=None, n_estimators=100, n_jobs=-1,
+                       oob_score=False, random_state=123, verbose=0,
+                       warm_start=False)
+2025-08-27 12:46:04,116:INFO:create_model() successfully completed......................................
+2025-08-27 12:46:10,900:INFO:Initializing create_model()
+2025-08-27 12:46:10,900:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f1344f52310>, estimator=xgboost, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:46:10,900:INFO:Checking exceptions
+2025-08-27 12:46:10,901:INFO:Importing libraries
+2025-08-27 12:46:10,901:INFO:Copying training dataset
+2025-08-27 12:46:10,984:INFO:Defining folds
+2025-08-27 12:46:10,984:INFO:Declaring metric variables
+2025-08-27 12:46:10,984:INFO:Importing untrained model
+2025-08-27 12:46:10,984:INFO:Extreme Gradient Boosting Imported successfully
+2025-08-27 12:46:10,985:INFO:Starting cross validation
+2025-08-27 12:46:10,985:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:46:22,781:INFO:Calculating mean and std
+2025-08-27 12:46:22,782:INFO:Creating metrics dataframe
+2025-08-27 12:46:22,782:INFO:Finalizing model
+2025-08-27 12:46:24,016:INFO:Uploading results into container
+2025-08-27 12:46:24,017:INFO:Uploading model into container now
+2025-08-27 12:46:24,017:INFO:_master_model_container: 6
+2025-08-27 12:46:24,017:INFO:_display_container: 7
+2025-08-27 12:46:24,018:INFO:XGBClassifier(base_score=None, booster='gbtree', callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='gpu', early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=None,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=-1, num_parallel_tree=None, ...)
+2025-08-27 12:46:24,018:INFO:create_model() successfully completed......................................
+2025-08-27 12:46:30,976:INFO:Initializing create_model()
+2025-08-27 12:46:30,976:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x7f1344f52310>, estimator=lightgbm, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=False, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2025-08-27 12:46:30,976:INFO:Checking exceptions
+2025-08-27 12:46:30,976:INFO:Importing libraries
+2025-08-27 12:46:30,976:INFO:Copying training dataset
+2025-08-27 12:46:31,070:INFO:Defining folds
+2025-08-27 12:46:31,070:INFO:Declaring metric variables
+2025-08-27 12:46:31,070:INFO:Importing untrained model
+2025-08-27 12:46:31,071:INFO:Light Gradient Boosting Machine Imported successfully
+2025-08-27 12:46:31,071:INFO:Starting cross validation
+2025-08-27 12:46:31,071:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=1
+2025-08-27 12:46:31,397:INFO:[LightGBM] [Info] Number of positive: 63021, number of negative: 62979
+2025-08-27 12:46:31,423:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008942 seconds.
+2025-08-27 12:46:31,423:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:31,423:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:31,424:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:31,425:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500167 -> initscore=0.000667
+2025-08-27 12:46:31,425:INFO:[LightGBM] [Info] Start training from score 0.000667
+2025-08-27 12:46:32,414:INFO:[LightGBM] [Info] Number of positive: 63021, number of negative: 62979
+2025-08-27 12:46:32,427:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.012584 seconds.
+2025-08-27 12:46:32,427:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:32,427:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:32,428:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:32,429:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500167 -> initscore=0.000667
+2025-08-27 12:46:32,429:INFO:[LightGBM] [Info] Start training from score 0.000667
+2025-08-27 12:46:33,500:INFO:[LightGBM] [Info] Number of positive: 63021, number of negative: 62979
+2025-08-27 12:46:33,513:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.012532 seconds.
+2025-08-27 12:46:33,513:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:33,513:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:33,513:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:33,514:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500167 -> initscore=0.000667
+2025-08-27 12:46:33,514:INFO:[LightGBM] [Info] Start training from score 0.000667
+2025-08-27 12:46:34,540:INFO:[LightGBM] [Info] Number of positive: 63021, number of negative: 62979
+2025-08-27 12:46:34,548:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008042 seconds.
+2025-08-27 12:46:34,548:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:34,549:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:34,549:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:34,550:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500167 -> initscore=0.000667
+2025-08-27 12:46:34,550:INFO:[LightGBM] [Info] Start training from score 0.000667
+2025-08-27 12:46:35,497:INFO:[LightGBM] [Info] Number of positive: 63022, number of negative: 62978
+2025-08-27 12:46:35,506:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008894 seconds.
+2025-08-27 12:46:35,506:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:35,506:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:35,507:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:35,507:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500175 -> initscore=0.000698
+2025-08-27 12:46:35,507:INFO:[LightGBM] [Info] Start training from score 0.000698
+2025-08-27 12:46:36,547:INFO:[LightGBM] [Info] Number of positive: 63022, number of negative: 62978
+2025-08-27 12:46:36,556:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008421 seconds.
+2025-08-27 12:46:36,563:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:36,563:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:36,563:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:36,564:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500175 -> initscore=0.000698
+2025-08-27 12:46:36,564:INFO:[LightGBM] [Info] Start training from score 0.000698
+2025-08-27 12:46:37,788:INFO:[LightGBM] [Info] Number of positive: 63022, number of negative: 62978
+2025-08-27 12:46:37,797:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008374 seconds.
+2025-08-27 12:46:37,797:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:37,797:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:37,797:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:37,798:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500175 -> initscore=0.000698
+2025-08-27 12:46:37,798:INFO:[LightGBM] [Info] Start training from score 0.000698
+2025-08-27 12:46:38,866:INFO:[LightGBM] [Info] Number of positive: 63022, number of negative: 62978
+2025-08-27 12:46:38,874:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008009 seconds.
+2025-08-27 12:46:38,874:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:38,874:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:38,875:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:38,875:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500175 -> initscore=0.000698
+2025-08-27 12:46:38,875:INFO:[LightGBM] [Info] Start training from score 0.000698
+2025-08-27 12:46:39,806:INFO:[LightGBM] [Info] Number of positive: 63022, number of negative: 62978
+2025-08-27 12:46:39,814:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008366 seconds.
+2025-08-27 12:46:39,815:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:39,815:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:39,815:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:39,816:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500175 -> initscore=0.000698
+2025-08-27 12:46:39,816:INFO:[LightGBM] [Info] Start training from score 0.000698
+2025-08-27 12:46:40,757:INFO:[LightGBM] [Info] Number of positive: 63022, number of negative: 62978
+2025-08-27 12:46:40,766:INFO:[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.008410 seconds.
+2025-08-27 12:46:40,766:INFO:You can set `force_col_wise=true` to remove the overhead.
+2025-08-27 12:46:40,766:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:40,766:INFO:[LightGBM] [Info] Number of data points in the train set: 126000, number of used features: 50
+2025-08-27 12:46:40,767:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500175 -> initscore=0.000698
+2025-08-27 12:46:40,767:INFO:[LightGBM] [Info] Start training from score 0.000698
+2025-08-27 12:46:41,390:INFO:Calculating mean and std
+2025-08-27 12:46:41,390:INFO:Creating metrics dataframe
+2025-08-27 12:46:41,392:INFO:Finalizing model
+2025-08-27 12:46:41,749:INFO:[LightGBM] [Info] Number of positive: 70024, number of negative: 69976
+2025-08-27 12:46:41,760:INFO:[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.003729 seconds.
+2025-08-27 12:46:41,760:INFO:You can set `force_row_wise=true` to remove the overhead.
+2025-08-27 12:46:41,760:INFO:And if memory is not enough, you can set `force_col_wise=true`.
+2025-08-27 12:46:41,761:INFO:[LightGBM] [Info] Total Bins 12750
+2025-08-27 12:46:41,761:INFO:[LightGBM] [Info] Number of data points in the train set: 140000, number of used features: 50
+2025-08-27 12:46:41,761:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500171 -> initscore=0.000686
+2025-08-27 12:46:41,761:INFO:[LightGBM] [Info] Start training from score 0.000686
+2025-08-27 12:46:42,624:INFO:Uploading results into container
+2025-08-27 12:46:42,625:INFO:Uploading model into container now
+2025-08-27 12:46:42,626:INFO:_master_model_container: 7
+2025-08-27 12:46:42,626:INFO:_display_container: 8
+2025-08-27 12:46:42,626:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=123, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2025-08-27 12:46:42,626:INFO:create_model() successfully completed......................................
