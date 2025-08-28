@@ -3,3 +3,4 @@
 tests/
 results/
 codecarbon_logs/
+*.log
