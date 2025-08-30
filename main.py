@@ -9,13 +9,13 @@ from sklearn.datasets import make_classification
 # --- 0. CONFIGURAÇÕES PRINCIPAIS DO EXPERIMENTO ---
 
 EXECUTION_MODE = 'CC_MODE_OFF'
-N_RUNS = 30
+N_RUNS = 1
 
 # --- 1. GERAÇÃO DO CONJUNTO DE DADOS ---
 print("Gerando o conjunto de dados...")
 # y é o vetor de rótulos
 X, y = make_classification(
-    n_samples=200000,  # Número de amostras (dados)
+    n_samples=2000,  # Número de amostras (dados)
     n_features=50,  # Número de características para classificação
     n_informative=25,  # Apenas 25 características são relevantes
     n_redundant=5,  # Características linearmente dependentes
@@ -48,8 +48,7 @@ models_to_test = [
 ]
 
 for run in range(1, N_RUNS + 1):
-    print(f"\n======= INICIANDO EXECUÇÃO {run}/{N_RUNS} PARA O MODO \
-    {EXECUTION_MODE} =======")
+    print(f"\n======= INICIANDO EXECUÇÃO {run}/{N_RUNS} PARA O MODO {EXECUTION_MODE} =======")
 
     all_results_for_this_run = []
 
@@ -92,8 +91,7 @@ for run in range(1, N_RUNS + 1):
     if all_results_for_this_run:
         run_df = pd.DataFrame(all_results_for_this_run)
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        run_filename = os.path.join(final_results_dir, f"run_{run}_\
-                                   {EXECUTION_MODE}_{timestamp}.csv")
+        run_filename = os.path.join(final_results_dir, f"run_{run}_{EXECUTION_MODE}_{timestamp}.csv")
         run_df.to_csv(run_filename, index=False)
         print(f"Resultados da execução {run} salvos em: {run_filename}")
 

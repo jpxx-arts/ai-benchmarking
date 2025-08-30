@@ -38,8 +38,7 @@ def main():
     stats_on = analyze_results(on_path, 'ON')
 
     if stats_off is None or stats_on is None:
-        print("Erro: Pastas de resultados não encontradas ou vazias. \
-              Execute o main.py primeiro para ambos os modos.")
+        print("Erro: Pastas de resultados não encontradas ou vazias. Execute o main.py primeiro para ambos os modos.")
         return
 
     # Junta os resultados dos dois modos em uma única tabela
