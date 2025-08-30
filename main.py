@@ -18,7 +18,7 @@ X, y = make_classification(
     n_samples=200000,  # Número de amostras (dados)
     n_features=50,  # Número de características para classificação
     n_informative=25,  # Apenas 25 características são relevantes
-    n_redudant=5,  # Características linearmente dependentes
+    n_redundant=5,  # Características linearmente dependentes
     random_state=42  # "Seed" para reprodutibilidade em experimentos
 )
 X_df = pd.DataFrame(X, columns=[f'feature_{i}' for i in range(X.shape[1])])
@@ -48,8 +48,8 @@ models_to_test = [
 ]
 
 for run in range(1, N_RUNS + 1):
-    print(f"\n======= INICIANDO EXECUÇÃO {
-          run}/{N_RUNS} PARA O MODO {EXECUTION_MODE} =======")
+    print(f"\n======= INICIANDO EXECUÇÃO {run}/{N_RUNS} PARA O MODO \
+    {EXECUTION_MODE} =======")
 
     all_results_for_this_run = []
 
@@ -92,8 +92,8 @@ for run in range(1, N_RUNS + 1):
     if all_results_for_this_run:
         run_df = pd.DataFrame(all_results_for_this_run)
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        run_filename = os.path.join(final_results_dir, f"run_{run}_{
-                                    EXECUTION_MODE}_{timestamp}.csv")
+        run_filename = os.path.join(final_results_dir, f"run_{run}_\
+                                   {EXECUTION_MODE}_{timestamp}.csv")
         run_df.to_csv(run_filename, index=False)
         print(f"Resultados da execução {run} salvos em: {run_filename}")
 
