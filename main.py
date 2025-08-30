@@ -2,59 +2,65 @@ import pandas as pd
 import datetime
 import os
 import time
-from pycaret.classification import setup, create_model, pull, models
+from pycaret.classification import setup, create_model, pull
 from codecarbon import EmissionsTracker
 from sklearn.datasets import make_classification
 
 # --- 0. CONFIGURAÇÕES PRINCIPAIS DO EXPERIMENTO ---
 
-EXECUTION_MODE = 'CC_MODE_OFF' 
-N_RUNS = 5 
-CPU_TDP = 350
+EXECUTION_MODE = 'CC_MODE_OFF'
+N_RUNS = 30
 
 # --- 1. GERAÇÃO DO CONJUNTO DE DADOS ---
 print("Gerando o conjunto de dados...")
+# y é o vetor de rótulos
 X, y = make_classification(
-    n_samples=200000, 
-    n_features=50,
-    n_informative=25,
-    n_redundant=5,
-    random_state=42
+    n_samples=200000,  # Número de amostras (dados)
+    n_features=50,  # Número de características para classificação
+    n_informative=25,  # Apenas 25 características são relevantes
+    n_redudant=5,  # Características linearmente dependentes
+    random_state=42  # "Seed" para reprodutibilidade em experimentos
 )
 X_df = pd.DataFrame(X, columns=[f'feature_{i}' for i in range(X.shape[1])])
 y_s = pd.Series(y, name='target')
 df = pd.concat([X_df, y_s], axis=1)
 print("Dados prontos.")
 
-# --- 2. SETUP DO PYCARET (FEITO APENAS UMA VEZ) ---
-print("Configurando o ambiente PyCaret com use_gpu=True...")
-clf_setup = setup(data=df, target='target', session_id=123, use_gpu=True, verbose=False)
+# --- 2. SETUP DO PYCARET ---
+print("Configurando o ambiente PyCaret")
+clf_setup = setup(data=df, target='target', session_id=123,
+                  use_gpu=True, verbose=False)
 
-# --- 3. EXECUÇÃO DO BENCHMARK (LOOP DE 5 EXECUÇÕES) ---
+# --- 3. EXECUÇÃO DO BENCHMARK ---
 # Cria as pastas de resultado final e de logs brutos
 final_results_dir = os.path.join('results', EXECUTION_MODE)
 codecarbon_log_dir = os.path.join('codecarbon_logs', EXECUTION_MODE)
 os.makedirs(final_results_dir, exist_ok=True)
 os.makedirs(codecarbon_log_dir, exist_ok=True)
 
-models_to_test = ['lr', 'knn', 'nb', 'dt', 'rf', 'xgboost'] 
+models_to_test = [
+    'lr',      # Logistic Regression
+    'knn',     # K-Nearest Neighbors
+    'nb',      # Naive Bayes
+    'dt',      # Decision Tree
+    'rf',      # Random Forest
+    'xgboost'  # Extreme Gradient Boosting
+]
 
 for run in range(1, N_RUNS + 1):
-    print(f"\n======= INICIANDO EXECUÇÃO {run}/{N_RUNS} PARA O MODO {EXECUTION_MODE} =======")
-    
+    print(f"\n======= INICIANDO EXECUÇÃO {
+          run}/{N_RUNS} PARA O MODO {EXECUTION_MODE} =======")
+
     all_results_for_this_run = []
 
     for model_id in models_to_test:
         print(f"--- Processando modelo: {model_id} (Execução {run}) ---")
-        
-        # <<< CORREÇÃO APLICADA AQUI >>>
-        # Usando os parâmetros corretos da documentação
+
         tracker = EmissionsTracker(
             project_name=f"{EXECUTION_MODE}_{model_id}_run_{run}",
-            force_cpu_power=CPU_TDP,
-            output_dir=codecarbon_log_dir 
+            output_dir=codecarbon_log_dir
         )
-        
+
         try:
             tracker.start()
             create_model(model_id, verbose=False)
@@ -67,7 +73,7 @@ for run in range(1, N_RUNS + 1):
         emissions_data = tracker.final_emissions_data
         performance_df = pull()
         mean_performance = performance_df.loc['Mean'].to_dict()
-        
+
         if emissions_data:
             sustainability_metrics = {
                 'model_id': model_id,
@@ -86,8 +92,8 @@ for run in range(1, N_RUNS + 1):
     if all_results_for_this_run:
         run_df = pd.DataFrame(all_results_for_this_run)
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        # Salva na pasta 'results', não na pasta de logs
-        run_filename = os.path.join(final_results_dir, f"run_{run}_{EXECUTION_MODE}_{timestamp}.csv")
+        run_filename = os.path.join(final_results_dir, f"run_{run}_{
+                                    EXECUTION_MODE}_{timestamp}.csv")
         run_df.to_csv(run_filename, index=False)
         print(f"Resultados da execução {run} salvos em: {run_filename}")
 
