@@ -1,31 +1,32 @@
 #!/bin/bash
 
 # --- CONFIGURAÇÕES GERAIS ---
-TOTAL_RUNS=30
+TOTAL_RUNS=1
+PYTHON_SCRIPT="main.py" # ### MUDANÇA ### Coloque o nome do seu script Python aqui
 
 # --- VALIDAÇÃO DO INPUT ---
 if [ "$1" != "on" ] && [ "$1" != "off" ]; then
   echo "Erro: Forneça um argumento ('on' ou 'off') para definir o CC Mode."
-  echo "Uso: ./run_experiment.sh on"
-  echo "  ou: ./run_experiment.sh off"
+  echo "Uso: ./run_benchmark.sh on"
+  echo "  ou: ./run_benchmark.sh off"
   exit 1
 fi
 
 # Define o modo CC com base no argumento
 if [ "$1" == "on" ]; then
-  EXEC_MODE="CC_MODE_ON"
+  EXEC_MODE="cc_on" # ### MUDANÇA ### Nomes mais curtos para pastas
 else
-  EXEC_MODE="CC_MODE_OFF"
+  EXEC_MODE="cc_off"
 fi
 
 echo "========================================================"
 echo "    INICIANDO EXPERIMENTO COMPLETO - MODO: $EXEC_MODE"
 echo "========================================================"
 
-# Define os cenários de custo computacional que queremos rodar
-COST_SCENARIOS=("low_cost" "high_cost")
+# ### MUDANÇA ### Nomes dos cenários alinhados com o script Python
+COST_SCENARIOS=("comm_bound" "compute_bound")
 
-# --- LOOP SOBRE OS CENÁRIOS (BAIXO E ALTO CUSTO) ---
+# --- LOOP SOBRE OS CENÁRIOS ---
 for scenario in "${COST_SCENARIOS[@]}"; do
 
   echo ""
@@ -54,20 +55,23 @@ for scenario in "${COST_SCENARIOS[@]}"; do
   # Loop principal para as execuções deste cenário
   for i in $(seq $START_RUN $TOTAL_RUNS); do
     echo ""
-    echo "--- [$(date)] Iniciando Execução #$i de $TOTAL_RUNS (Cenário: $scenario) ---"
+    echo "--- [$(date)] Iniciando Execução #$i de $TOTAL_RUNS (Cenário: $scenario, Modo: $EXEC_MODE) ---"
 
-    # Modifica o modo no arquivo main.py
-    sed -i "s/EXECUTION_MODE = '.*'/EXECUTION_MODE = '$EXEC_MODE'/" main.py
+    # Modifica o modo no arquivo Python
+    sed -i "s/EXECUTION_MODE = '.*'/EXECUTION_MODE = '$EXEC_MODE'/" "$PYTHON_SCRIPT"
 
-    # Executa o script Python, passando o cenário como argumento
-    python main.py "$scenario" &&
-      echo "$i" >"$PROGRESS_FILE"
-
+    # ### MUDANÇA ###
+    # Executa o script Python, passando o CENÁRIO e o RUN_ID ($i) como argumentos.
+    python "$PYTHON_SCRIPT" "$scenario" "$i"
+    
+    # Checa o código de saída do último comando
     if [ $? -eq 0 ]; then
-      echo "--- [$(date)] Execução #$i concluída. Progresso salvo em $PROGRESS_FILE. ---"
+      echo "$i" > "$PROGRESS_FILE"
+      echo "--- [$(date)] Execução #$i concluída com sucesso. Progresso salvo. ---"
     else
-      echo "--- [$(date)] ERRO: Execução #$i falhou. O progresso NÃO foi salvo. ---"
-      echo "Saindo do script. Na próxima execução, ele tentará a execução #$i novamente."
+      echo "--- [$(date)] ERRO: A execução #$i falhou. O progresso NÃO foi salvo. ---"
+      echo "Saindo do script. Verifique o erro acima."
+      echo "Na próxima vez, o script tentará executar o passo #$i novamente."
       exit 1
     fi
   done
